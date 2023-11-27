@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LargeButton: View {
+    @State private var hovered: Bool = false
     let iconData: String
     let label: String
     var body: some View {
@@ -15,11 +16,20 @@ struct LargeButton: View {
             Image(iconData)
             .frame(width: 24, height: 24)
             .padding(24)
-            .background(hovered ? Color(red: 0.39, green: 0.71, blue: 1) : Color(red: 0.98, green: 0.98, blue: 0.98))
+            .background(hovered ? Color.theme.AccentShadeColor.opacity(0.2) : Color.theme.ShadeColor)
             .cornerRadius(100)
+            .simultaneousGesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged({_ in
+                        hovered = true
+                    })
+                    .onEnded({_ in
+                        hovered = false
+                    })
+            )
             Text(label)
               .font(Font.custom("Poppins", size: 15))
-              .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
+              .foregroundColor(Color.theme.MinorLabelColor)
         }
         .padding(0)
     }

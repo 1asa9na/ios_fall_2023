@@ -10,58 +10,13 @@ import SwiftUI
 struct ContactCard: View {
     let person: Person
     var body: some View {
-        VStack(alignment: .center, spacing: 20) {
-            HStack(alignment: .center) {
+        VStack(alignment: .leading, spacing: 20) {
+            HStack(alignment: .top) {
               // Space Between
-                HStack(alignment: .top, spacing: 10) {
-                    ZStack {
-                        Image("background")
-                        .frame(width: 48, height: 48)
-                        .background(.white)
-                        ZStack {
-                            Rectangle()
-                              .foregroundColor(.clear)
-                              .frame(width: 48, height: 48)
-                              .background(Color(red: 0.77, green: 0.77, blue: 0.77))
-                              .cornerRadius(1000)
-                            Rectangle()
-                                  .foregroundColor(.clear)
-                                  .frame(width: 48, height: 48)
-                                  .background(
-                                    Image(person.pfpAsset)
-                                      .resizable()
-                                      .aspectRatio(contentMode: .fill)
-                                      .frame(width: 58.439998626708984, height: 73.08000183105469)
-                                    )
-                        }
-                        .frame(width: 48, height: 48)
-                    }
-                    .frame(width: 48, height: 48)
-                    .clipShape(Circle())
-                    VStack(alignment: .leading, spacing: 8) {
-                        Text(person.name)
-                          .font(
-                            Font.custom("Poppins", size: 16)
-                              .weight(.bold)
-                          )
-                          .foregroundColor(Color(red: 0.05, green: 0.11, blue: 0.2))
-                        Text(person.deputy)
-                          .font(Font.custom("Poppins", size: 14))
-                          .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
-                    }
-                    .padding(0)
-                }
-                .padding(0)
+                CardMajorLabel(person: person, subLabelColor: Color.theme.MinorLabelColor, labelColor: Color.theme.MajorLabelColor)
               Spacer()
               // Alternative Views and Spacers
-                HStack(alignment: .center, spacing: 8) {
-                    Image("location")
-                    .frame(width: 16, height: 16)
-                    Text("1.2 KM")
-                      .font(Font.custom("Poppins", size: 14))
-                      .foregroundColor(Color(red: 0.53, green: 0.59, blue: 0.73))
-                }
-                .padding(0)
+                CardMinorLabel(iconData: "location", label: "1.2 KM", fontColor: Color.theme.MinorLabelColor)
             }
             .padding(0)
             .frame(width: 295, alignment: .center)
@@ -71,25 +26,9 @@ struct ContactCard: View {
               Rectangle()
                 .stroke(Color(red: 0.96, green: 0.96, blue: 0.96), lineWidth: 1)
             )
-            HStack(alignment: .top, spacing: 12) {
-                HStack(alignment: .center, spacing: 6) {
-                    Image("yellow-clock")
-                    .frame(width: 20, height: 20)
-                    Text("4,8 (120 Reviews)")
-                      .font(Font.custom("Poppins", size: 12))
-                      .foregroundColor(Color(red: 1, green: 0.69, blue: 0.32))
-                }
-                .padding(0)
-                .frame(maxWidth: .infinity, alignment: .center)
-                HStack(alignment: .center, spacing: 6) {
-                    Image("blue-clock")
-                    .frame(width: 20, height: 20)
-                    Text("Open at 17.00")
-                      .font(Font.custom("Poppins", size: 12))
-                      .foregroundColor(Color(red: 0.28, green: 0.58, blue: 1))
-                }
-                .padding(0)
-                .frame(maxWidth: .infinity, alignment: .leading)
+            HStack(alignment: .center, spacing: 12) {
+                CardMinorLabel(iconData: "yellow-clock", label: "4,8 (120 Reviews)", fontColor: Color.theme.AttentionColor)
+                CardMinorLabel(iconData: "blue-clock", label: "Open at 17.00", fontColor: Color.theme.AccentColor)
             }
             .padding(0)
             .frame(maxWidth: .infinity, alignment: .topLeading)

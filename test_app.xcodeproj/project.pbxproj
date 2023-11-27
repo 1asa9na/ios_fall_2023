@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE276DB52B1320AD00FF59C7 /* ThemeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE276DB42B1320AD00FF59C7 /* ThemeProtocol.swift */; };
+		CE276DB82B1321ED00FF59C7 /* ThemeCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE276DB72B1321ED00FF59C7 /* ThemeCollection.swift */; };
 		CE6E6C312B0F039D00894C3A /* MainHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6C302B0F039D00894C3A /* MainHeader.swift */; };
 		CE6E6C332B0F107F00894C3A /* PersonCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE6E6C322B0F107F00894C3A /* PersonCard.swift */; };
 		CE6EF3202B0FE0E700140979 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = CE6EF30E2B0FE0E500140979 /* Poppins-Black.ttf */; };
@@ -44,6 +46,8 @@
 		CEB362FD2988517B000D80E1 /* test_appTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB362FC2988517B000D80E1 /* test_appTests.swift */; };
 		CEB363072988517B000D80E1 /* test_appUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB363062988517B000D80E1 /* test_appUITests.swift */; };
 		CEB363092988517B000D80E1 /* test_appUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEB363082988517B000D80E1 /* test_appUITestsLaunchTests.swift */; };
+		CED2D90E2B14E3F40039A1F5 /* CardMinorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2D90D2B14E3F40039A1F5 /* CardMinorLabel.swift */; };
+		CED2D9102B14E9F40039A1F5 /* CardMajorLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CED2D90F2B14E9F40039A1F5 /* CardMajorLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +68,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE276DB42B1320AD00FF59C7 /* ThemeProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeProtocol.swift; sourceTree = "<group>"; };
+		CE276DB72B1321ED00FF59C7 /* ThemeCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeCollection.swift; sourceTree = "<group>"; };
 		CE6E6C302B0F039D00894C3A /* MainHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeader.swift; sourceTree = "<group>"; };
 		CE6E6C322B0F107F00894C3A /* PersonCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCard.swift; sourceTree = "<group>"; };
 		CE6EF30E2B0FE0E500140979 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
@@ -104,6 +110,8 @@
 		CEB363022988517B000D80E1 /* test_appUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = test_appUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEB363062988517B000D80E1 /* test_appUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_appUITests.swift; sourceTree = "<group>"; };
 		CEB363082988517B000D80E1 /* test_appUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test_appUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CED2D90D2B14E3F40039A1F5 /* CardMinorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMinorLabel.swift; sourceTree = "<group>"; };
+		CED2D90F2B14E9F40039A1F5 /* CardMajorLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMajorLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +139,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE276DB32B13208400FF59C7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CE276DB42B1320AD00FF59C7 /* ThemeProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CE276DB62B1321D500FF59C7 /* Collections */ = {
+			isa = PBXGroup;
+			children = (
+				CE276DB72B1321ED00FF59C7 /* ThemeCollection.swift */,
+			);
+			path = Collections;
+			sourceTree = "<group>";
+		};
 		CE6E6C2F2B0F035100894C3A /* Containers */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +165,8 @@
 				CE6F937F2B0F425B00A1C2C8 /* Contacts.swift */,
 				CE6EF3322B0FE8A400140979 /* ContactCard.swift */,
 				CE6F80B22B10BAB400985504 /* NavTabBar.swift */,
+				CED2D90D2B14E3F40039A1F5 /* CardMinorLabel.swift */,
+				CED2D90F2B14E9F40039A1F5 /* CardMajorLabel.swift */,
 			);
 			path = Containers;
 			sourceTree = "<group>";
@@ -219,6 +245,8 @@
 		CEB362EA29885177000D80E1 /* test_app */ = {
 			isa = PBXGroup;
 			children = (
+				CE276DB62B1321D500FF59C7 /* Collections */,
+				CE276DB32B13208400FF59C7 /* Protocols */,
 				CE6EF33D2B0FF59B00140979 /* Tabs */,
 				CE6EF3342B0FEFD700140979 /* Structures */,
 				CE6EF3072B0FC4A200140979 /* Fonts */,
@@ -407,17 +435,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE6EF3382B0FF07000140979 /* Person.swift in Sources */,
+				CED2D9102B14E9F40039A1F5 /* CardMajorLabel.swift in Sources */,
 				CE6F93802B0F425B00A1C2C8 /* Contacts.swift in Sources */,
 				CE6E6C332B0F107F00894C3A /* PersonCard.swift in Sources */,
+				CE276DB52B1320AD00FF59C7 /* ThemeProtocol.swift in Sources */,
 				CE6EF33A2B0FF51000140979 /* test_app.swift in Sources */,
 				CE6E6C312B0F039D00894C3A /* MainHeader.swift in Sources */,
 				CE6EF33C2B0FF56100140979 /* EmptyTabView.swift in Sources */,
 				CE6F93792B0F3C1E00A1C2C8 /* SearchBar.swift in Sources */,
 				CE6F937B2B0F3CCB00A1C2C8 /* Actions.swift in Sources */,
+				CE276DB82B1321ED00FF59C7 /* ThemeCollection.swift in Sources */,
 				CE6F937E2B0F3D4400A1C2C8 /* LargeButton.swift in Sources */,
 				CEB362EE29885178000D80E1 /* ContentView.swift in Sources */,
 				CE6EF3332B0FE8A400140979 /* ContactCard.swift in Sources */,
 				CE6EF33F2B0FF5B900140979 /* MainTabView.swift in Sources */,
+				CED2D90E2B14E3F40039A1F5 /* CardMinorLabel.swift in Sources */,
 				CE6F80B32B10BAB400985504 /* NavTabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
