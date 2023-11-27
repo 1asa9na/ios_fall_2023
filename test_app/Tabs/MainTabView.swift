@@ -14,7 +14,7 @@ struct MainTabView: View {
                 VStack(alignment: .leading, spacing: 24) {
                     VStack(alignment: .leading, spacing: 20) {
                         MainHeader()
-                        PersonCard(person: Person(name: "Dr. Imran Syahir", pfpAsset: "photo", deputy: "General Doctor"))
+                        PersonCard()
                     }
                     .padding(0)
                     SearchBar()
